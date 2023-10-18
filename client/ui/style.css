@@ -1,0 +1,10 @@
+#overlay {
+	position: absolute;
+	left: 1.5%;
+	bottom: 3.1%;
+    width: 14%;
+    height: 16%;
+	opacity: 0;
+    border-radius: 5px;
+	transition: all 1s;
+}
