@@ -3,7 +3,7 @@ local oldPeds = {}
 local turfData = nil
 
 RegisterNetEvent("exp_turfwars:SetPlayerGang")
-AddEventHandler("exp_turfwars:SetPlayerGang", function()
+AddEventHandler("exp_turfwars:SetPlayerGang", function(gang)
     player.Gang = gang
 end)
 
@@ -114,6 +114,12 @@ AddEventHandler("exp_turfwars:Captured", function(turf, gang)
             message = _("capture", _(turf)),
             type = "default"
         })
+    end
+
+    if turf == turfData.name then
+        TriggerServerCallback("exp_turfwars:GetTurfData", function(data)
+            turfData = data
+        end, turf)
     end
 end)
 
