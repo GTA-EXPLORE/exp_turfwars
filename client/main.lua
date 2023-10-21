@@ -2,10 +2,9 @@ player = {}
 local oldPeds = {}
 local turfData = nil
 
-Citizen.CreateThread(function()
-    TriggerServerCallback("exp_turfwars:GetPlayerGang", function(gang)
-        player.Gang = gang
-    end)
+RegisterNetEvent("exp_turfwars:SetPlayerGang")
+AddEventHandler("exp_turfwars:SetPlayerGang", function()
+    player.Gang = gang
 end)
 
 -- TURF THREAD

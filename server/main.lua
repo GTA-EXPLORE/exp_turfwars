@@ -1,4 +1,4 @@
-local player_to_gang, turfs = {}, {}
+player_to_gang, turfs = {}, {}
 
 MySQL.ready(function()
     local results = MySQL.query.await('SELECT * FROM turfs')
@@ -9,12 +9,6 @@ MySQL.ready(function()
             reputations = json.decode(row.reputations)
         }
     end
-end)
-
-RegisterServerCallback("exp_turfwars:GetPlayerGang", function(source, callback)
-    local gang = GetPlayerGang(source)
-    player_to_gang[source] = gang
-    callback(gang)
 end)
 
 RegisterServerCallback("exp_turfwars:GetTurfData", function(source, callback, turf)

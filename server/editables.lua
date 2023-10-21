@@ -1,8 +1,15 @@
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
+RegisterNetEvent('esx:playerLoaded', function(source)
+    local gang = GetPlayerGang(source)
+    player_to_gang[source] = gang
+    TriggerClientEvent("exp_turfwars:SetPlayerGang", source, gang) -- MUST BE TRIGGERED WHEN CONNECTION
+end)
+
 function GetPlayerGang(player_src)
     local xPlayer = ESX.GetPlayerFromId(player_src)
+    local identifier = xPlayer.getIdentifier()
     local result = MySQL.single.await('SELECT gang FROM users WHERE identifier=@identifier', {
         ["@identifier"] = xPlayer.getIdentifier()
     })
