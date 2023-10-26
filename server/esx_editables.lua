@@ -1,5 +1,8 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+-- REMOVE THIS FILE IF NOT USING ESX
+
+ESX = exports["es_extended"]:getSharedObject()
+-- ESX = nil
+-- TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterNetEvent('esx:playerLoaded', function(source)
     local gang = GetPlayerGang(source)
