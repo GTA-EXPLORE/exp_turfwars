@@ -17,3 +17,11 @@ You can find the complete [documentation](https://discord.com/channels/957638068
 
 # Check out all our works
 We are working on other **resources**. You can check them out on our [website](https://www.gta-explore.com/#services).
+
+# Updates
+### Dec 27, 2023
+> - Now automatically compatible with QB-Core.
+### Oct 21, 2023
+> - Fixed gang retrieving on player connection.
+> - Turf captures are now updated in real time.
+> - Added de locale, thanks to xionerazer.
