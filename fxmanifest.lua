@@ -23,11 +23,3 @@ server_scripts {
 	'config.lua',
 	'server/*',
 }
-
-escrow_ignore {
-    "**/editables.lua",
-    "locales/*",
-    "config.lua"
-}
-
-
