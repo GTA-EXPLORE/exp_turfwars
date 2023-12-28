@@ -1,8 +1,9 @@
 function SellAnim(ped, target)
-    local heading = GetEntityHeading(ped)
+    TaskTurnPedToFaceEntity(ped, target, -1)
+    TaskTurnPedToFaceEntity(target, ped, -1)
+    while GetIsTaskActive(ped, 225) or GetIsTaskActive(target, 225) do Wait(100) end
     FreezeEntityPosition(ped, true)
     FreezeEntityPosition(target, true)
-    SetEntityHeading(target, heading-180.0)
     TaskStandStill(target, 5000)
     SetPedAnim(target, "amb@world_human_smoking@male@male_a@enter","enter", 2000)
     Wait(1000)
@@ -14,6 +15,7 @@ function SellAnim(ped, target)
     Wait(1000)
     FreezeEntityPosition(ped, false)
     FreezeEntityPosition(target, false)
+    ClearPedTasks(ped)
 end
 
 function CallAnim(target)
