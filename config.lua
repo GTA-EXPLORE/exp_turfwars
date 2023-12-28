@@ -1,7 +1,6 @@
 LANGUAGE = "en"
 
 REQUIRED_POLICE = 0
-COP_BLIP_TIMER = 60000 -- 1 minute
 
 MAX_SELL = 7    -- MAX AMOUNT OF DRUG SOLD AT ONCE
 
@@ -36,19 +35,10 @@ DRUGS = { -- Item prices for sell
     ["meth"] = 200,
 }
 
-GANGS = {
-    neutral = { -- DEFAULT TURF GANG, WHEN NO REAL GANG HAS REPUTATION
-        Label = "Neutral",
-        Color = "white"
-    }, 
-    vagos = {
-        Label = "Vagos",
-        Color = "yellow"
-    },
-    ballas = {
-        Label = "Ballas",
-        Color = "purple"
-    }, 
+GANG_COLORS = {
+    neutral = "white", -- DEFAULT TURF GANG, WHEN NO REAL GANG HAS REPUTATION, 
+    vagos = "yellow",
+    ballas = "purple"
 }
 
 TURFS = {

@@ -97,7 +97,7 @@ function DisplayTurfOnScreen(show, gang)
     if show then
         SendNUIMessage({
             action = "SHOW",
-            color = GANGS[gang].Color
+            color = GANG_COLORS[gang]
         })
     else
         SendNUIMessage({
