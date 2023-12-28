@@ -2,7 +2,7 @@
 Step into the gritty underworld with our exclusive **Turf War** script. This immersive addition to your server allows you to establish, expand, and defend your **turf**. Form and manage your own **gang**, elevate your **reputation**, and engage in the high-stakes business of **drug trafficking**. **Capture territories**, dominate your rivals, and make your mark in a world where power and influence are the ultimate currency.
 
 # Preview
-_Coming soon._
+https://youtu.be/Rq18dVG3shg
 
 # Features
 - Add customizable **turfs**.
